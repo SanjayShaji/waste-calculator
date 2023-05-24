@@ -40,7 +40,6 @@ fee.addEventListener('input', calculateTotalFee)
 
 function calculateRowMultiply() {
     var row = this.parentNode.parentNode;
-    console.log(row)
     var wtCell = row.getElementsByClassName('amount')[0].value;
     var qtyCell = row.getElementsByClassName('bedsQty')[0].value;
     var multiply = 0;
@@ -56,14 +55,12 @@ function calculateRowMultiply() {
 function calculateTotal() {
     var totalCost = 0;
     var tCost = document.getElementsByClassName('multiplyCost')
-    console.log(tCost);
     for (let i = 0; i < tCost.length; i++) {
         totalCost += parseFloat(tCost[i].innerHTML)
     }
-    console.log(tCost)
     if (isNaN(totalQty)) {
         totalQty = 0
     }
-    console.log(totalQty);
     document.getElementById('totalBedsCost').textContent = totalCost;
 }
+

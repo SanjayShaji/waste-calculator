@@ -163,13 +163,9 @@ function calculateTotals() {
 function calculateTotalFee() {
     var totalFee = 0;
     var fee = parseFloat(document.getElementById('fee').value)
-    console.log(fee);
     var wt = parseFloat(document.getElementById('totalWt').innerHTML);
-    console.log(wt);
     var tWt = parseFloat(wt);
-    console.log(tWt);
     totalFee = parseFloat((tWt / 1000) * fee).toFixed(2);
-    console.log(totalFee);
     if (isNaN(totalFee)) {
         totalFee = 0;
     }
