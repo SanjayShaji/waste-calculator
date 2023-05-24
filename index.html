@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div  class="table-container">
+    <table id="firstTable">
+        <thead>
+            <tr>
+                <th>Items</th>
+                <th>Wt</th>
+                <th>T Qty</th>
+                <th>T Wt</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tr>
+            <td>Total</td>
+            <td></td>
+            <td id="totalQty">0</td>
+            <td id="totalWt">0</td>
+            <td><input class="commentCell" type="text"></td>
+
+        </tr>
+        <tr>
+            <td style="font-weight: bold;">WD Fee/1000kgs:</td>
+            <td><input id="fee" type="number" value="240"></td>
+            <td style="font-weight: bold; text-align: center;">Total WD Fee:</td>
+            <td id="totalFee">0</td>
+            <td><input class="commentCell" type="text"></td>
+        </tr>
+
+
+
+    </table>
+
+
+    <table id="secondTable" style="margin-top: 50px;">
+        <thead>
+            <tr>
+                <th>BEDS </th>
+                <th>$Amount </th>
+                <th>T Qty</th>
+                <th>T Cost in $ </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="font-weight: bold; text-align: center;">Total</td>
+            <td id="totalBedsCost">0</td>
+            <td><input class="commentCell" type="text"></td>
+
+        </tr>
+    </table>
+
+</div>
+    <script src="table1.js"></script>
+    <script src="table2.js"></script>
+</body>
+</html>

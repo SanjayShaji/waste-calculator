@@ -1,0 +1,52 @@
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    width: 180px;
+    /* text-align: center; */
+}
+
+.wt {
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    text-align: center;
+    padding-left: 15px;
+    
+}
+
+.multiplyWt,
+.multiplyCost {
+    text-align: center;
+
+}
+
+#totalFee::before {
+    content: "\0024";
+}
+
+.amount {
+    font-weight: bold;
+}
+
+#totalFee,
+#fee,
+#totalBedsCost,
+#totalQty,
+#totalWt {
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#totalBedsCost::before {
+    content: "\0024";
+
+}
+
