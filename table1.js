@@ -78,13 +78,6 @@ const items = {
                 { name: "Other 5", comment: "set a weight value" },
 
             ]
-        },
-        {
-            itemName: "Tech",
-            itemData: [
-                { name: "Boardroom", wt: 30 },
-
-            ]
         }
 
     ]
@@ -103,7 +96,7 @@ items.data.map(item => {
         tr.innerHTML = `<td>${data.name}</td>
                     <td><input class="cell1 wt" default="0" value="${data.wt}" type="number"></td>
                     <td><input class="cell1 qty" default="0" type="number" value="0" onfocus="clearInitialValue(this)"></td>
-                    <td class="multiplyWt">0</td>
+                    <td><input readonly type="number" class="multiplyWt" value="0"></input></td>
                     ${data.comment ? `<td><input value="${data.comment}" class="commentCell" type="text"></td>` : `<td><input class="commentCell" type="text"></td>`}`;
 
         tbody1.appendChild(tr);
@@ -132,7 +125,7 @@ function calculateRowMultiply() {
         multiply = wtCell * qtyCell;
     }
 
-    row.getElementsByClassName('multiplyWt')[0].textContent = multiply;
+    row.getElementsByClassName('multiplyWt')[0].value = multiply;
     calculateTotals();
     calculateTotalFee();
 }
@@ -147,7 +140,7 @@ function calculateTotals() {
         var qtyValue = parseFloat(tqty[i].value);
         if (!isNaN(qtyValue)) {
             totalQty += qtyValue;
-            var multiplyValue = parseFloat(twt[i].textContent);
+            var multiplyValue = parseFloat(twt[i].value);
             if (!isNaN(multiplyValue)) {
                 totalWt += multiplyValue;
             }

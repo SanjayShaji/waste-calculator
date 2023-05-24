@@ -23,8 +23,8 @@ table {
   input {
     border: none;
     text-align: center;
-    padding-left: 15px;
-    width: 90%;
+    /* padding-left: 10px; */
+    width: 100%;
   }
   
   input:focus {

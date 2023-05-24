@@ -17,7 +17,7 @@ bedsData.map(data => {
         tr.innerHTML = `<td >${data.name}</td>
                         <td><input class="cell2 amount" value=${data.amount} type="number"></td>
                         <td><input class="cell2 bedsQty" type="number" value=0 onfocus="clearInitialValue(this)"></td>
-                        <td class="multiplyCost">0</td>
+                        <td><input readonly type="number" class="multiplyCost" value="0"></input></td>
                         <td ><input class="commentCell2" type="text"></td>`
         tbody2.appendChild(tr);
 });
@@ -47,7 +47,7 @@ function calculateRowMultiply() {
         multiply = wtCell * qtyCell;
     }
 
-    row.getElementsByClassName('multiplyCost')[0].textContent = multiply;
+    row.getElementsByClassName('multiplyCost')[0].value = multiply;
     calculateTotal();
 }
 
