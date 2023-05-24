@@ -1,52 +1,80 @@
-
 table {
     border-collapse: collapse;
-}
-
-th,
-td {
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    width: 200px;
     border: 1px solid black;
-    width: 180px;
-    /* text-align: center; */
-}
-
-.wt {
+  }
+  
+  h1{
+    text-align: center;
+  }
+  th {
+    background-color: #f9f9f9;
+  }
+  
+  .wt {
     font-weight: bold;
-}
-
-input {
+  }
+  
+  input {
     border: none;
     text-align: center;
     padding-left: 15px;
-    
-}
+    width: 90%;
+  }
+  
+  input:focus {
+    outline: none;
+  }
 
-.multiplyWt,
-.multiplyCost {
+  .multiplyWt,
+  .multiplyCost {
     text-align: center;
-
-}
-
-#totalFee::before {
+  }
+  
+  #totalFee::before {
     content: "\0024";
-}
-
-.amount {
+  }
+  
+  .amount {
     font-weight: bold;
-}
+  }
+  
 
-#totalFee,
-#fee,
-#totalBedsCost,
-#totalQty,
-#totalWt {
+  #totalFee,
+  #fee,
+  #totalBedsCost,
+  #totalQty,
+  #totalWt {
     font-weight: bold;
     text-align: center;
-
-}
-
-#totalBedsCost::before {
+  }
+  
+  #totalBedsCost::before {
     content: "\0024";
+  }
+  
 
-}
-
+  @media screen and (max-width: 650px) {
+    table {
+      width: 100%;
+    }
+      
+  h1{
+    text-align: center;
+  }
+  
+    th, td {
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-bottom: none;
+    }
+    tr{
+        border-bottom: 2px solid grey;
+    }
+  }
